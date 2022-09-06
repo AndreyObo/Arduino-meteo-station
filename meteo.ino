@@ -21,6 +21,8 @@ int Hum_change[scale_size] = {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
 
 int chart_index;
 
+
+//Custom characters for drawing chart on lc dispaly
 byte Arrow[8] = {
   0b00000,
   0b00100,
@@ -107,6 +109,7 @@ byte Graph[8][8] = {
   0b11111 }
 };
 
+//App menu
 class UserMenu {
   public:
   void addItems(String it) {
@@ -188,7 +191,7 @@ class UserMenu {
 
 boolean back_but_press;
 
-enum Station_state {ShowAll, MenuActive, ShowTempGr, ShowPressGr, ShowHummGr, ShowAllGr};
+enum Station_state {ShowAll, MenuActive, ShowTempGr, ShowPressGr, ShowHummGr, ShowAllGr}; //App state
 
 enum Measure_type {temperature, pressure, humidity};
 
